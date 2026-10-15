@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paoul Jarred O. Andrada | Mapúa University CpE Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef8ff',
+                            100: '#d8f0ff',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0369a1',
+                            dark: '#0b1329',
+                            card: '#131c38',
+                            border: '#1e295b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(19, 28, 56, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(30, 41, 91, 0.6);
+        }
+        .hero-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(11, 19, 41, 0) 70%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    PA
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-white block">Paoul Jarred O. Andrada</span>
+                    <span class="text-xs text-cyan-400 font-medium">Mapúa University • CpE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About & Athletics</a>
+                <a href="#coursework" class="hover:text-cyan-400 transition-colors">Coursework & Videos</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Project DALOY</a>
+                <a href="#journey" class="hover:text-cyan-400 transition-colors">Journey</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-white font-semibold transition-all shadow-md shadow-brand-500/30">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Home</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">About & Athletics</a>
+            <a href="#coursework" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Coursework & Videos</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Project DALOY</a>
+            <a href="#journey" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Journey</a>
+            <a href="#contact" class="block text-center py-2.5 rounded-lg bg-brand-500 text-white font-semibold shadow-md">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="hero-glow top-1/4 -left-32"></div>
+        <div class="hero-glow bottom-10 -right-32"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Intro Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>Computer Engineering Scholar</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Hi, I'm <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Paoul Jarred</span> O. Andrada
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        "Bridging hardware, software, and AI to build smarter, resilient systems for tomorrow." Student at <span class="text-white font-semibold">Mapúa University</span>.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-95 shadow-lg shadow-cyan-500/25 transition-all text-center flex items-center justify-center space-x-2">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#coursework" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-brand-border/60 text-slate-200 font-semibold transition-all text-center flex items-center justify-center space-x-2 border border-brand-border">
+                            <i class="fa-solid fa-video text-cyan-400"></i>
+                            <span>Coursework & Videos</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Profile Card / Avatar Placeholder -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 rounded-3xl p-1.5 bg-gradient-to-tr from-cyan-500 via-brand-500 to-blue-700 shadow-2xl shadow-brand-500/20 group">
+                        <div class="w-full h-full rounded-[22px] overflow-hidden bg-brand-card relative flex flex-col items-center justify-center text-center p-6">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://placehold.co/400x500/0b1329/0ea5e9?text=Paoul+Jarred+Andrada')"></div>
+                            <div class="relative z-10 space-y-4">
+                                <div class="w-28 h-28 mx-auto rounded-2xl bg-brand-500/20 border-2 border-cyan-400 flex items-center justify-center shadow-xl backdrop-blur-md">
+                                    <i class="fa-solid fa-user-graduate text-5xl text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Paoul Jarred Andrada</h3>
+                                    <p class="text-xs text-cyan-400 font-medium">Mapúa University CpE Student</p>
+                                </div>
+                                <div class="flex justify-center space-x-3 text-slate-300">
+                                    <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-lg bg-brand-border/80 flex items-center justify-center hover:text-cyan-400 hover:bg-brand-border transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="https://github.com" target="_blank" class="w-9 h-9 rounded-lg bg-brand-border/80 flex items-center justify-center hover:text-cyan-400 hover:bg-brand-border transition"><i class="fa-brands fa-github"></i></a>
+                                    <a href="mailto:paouljarred@example.com" class="w-9 h-9 rounded-lg bg-brand-border/80 flex items-center justify-center hover:text-cyan-400 hover:bg-brand-border transition"><i class="fa-solid fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me & Athletics Section -->
+    <section id="about" class="py-24 bg-brand-dark/50 relative border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">About Me & Athletics</h2>
+                <p class="text-slate-400">Combining academic engineering rigor with competitive athletic drive and professional continuous learning.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Background & Passion Card -->
+                <div class="glass-card rounded-2xl p-8 space-y-4 hover:border-cyan-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">CpE Passion & Coding</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        As a Computer Engineering student at Mapúa University, I am deeply fascinated by how microcontrollers, IoT sensors, and artificial intelligence converge to solve pressing real-world issues. I love building smart embedded systems and robust software solutions.
+                    </p>
+                </div>
+
+                <!-- Athletic Achievements Card -->
+                <div class="glass-card rounded-2xl p-8 space-y-4 hover:border-cyan-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Athletics & Sports</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Active in volleyball and competitive football. Proudly achieved 3rd place in the CACPRISAA 2023 Quiz Bee and 3rd place in the Águila Cup. Scouted to play for Xavier School Nuvali and the UP Los Baños Football Team.
+                    </p>
+                </div>
+
+                <!-- Coursera Certificate Showcase Card -->
+                <div class="glass-card rounded-2xl p-8 space-y-4 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Coursera Certification</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Successfully completed <span class="text-cyan-400 font-semibold">"Design Thinking for Innovation"</span> authorized by University of Virginia (Issued Oct 15, 2026).
+                        </p>
+                    </div>
+                    <button onclick="openCertModal()" class="w-full py-2.5 rounded-lg bg-brand-500/20 hover:bg-brand-500/30 text-cyan-400 border border-cyan-500/30 font-medium text-sm transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>View Certificate Details</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Coursework & Video Section -->
+    <section id="coursework" class="py-24 relative border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Coursework & Activities</h2>
+                <p class="text-slate-400">Reflective essays, community engagement posters, and dedicated coursework video placeholders.</p>
+            </div>
+
+            <!-- Documents Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                
+                <!-- CPE101-4 Reflection Paper -->
+                <div class="glass-card rounded-2xl p-8 space-y-4 border-l-4 border-l-cyan-500">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold">CPE101-4 Activity</span>
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> Sept 9, 2026</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">College Reflection & Study Habits ("All Is Well")</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Authored by Paoul Jarred O. Andrada. Explores the transition from high school to college learning, effective time management strategies, active problem-solving study habits, and the importance of joining engineering organizations like ICpEP.
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="openReflectionModal()" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm inline-flex items-center space-x-2">
+                            <span>Read Full Reflection & Paper</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NSTP Poster -->
+                <div class="glass-card rounded-2xl p-8 space-y-4 border-l-4 border-l-blue-500">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold">NSTP Community Engagement</span>
+                        <span class="text-xs text-slate-400"><i class="fa-solid fa-hands-holding-child mr-1"></i> Civic Responsibility</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">National Service Training Program (NSTP) Poster</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Highlights community engagement, civic consciousness, leadership, values, and patriotism. Features the motto: <em>"Be the reason why someone believes in the goodness of people."</em>
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="openNstpModal()" class="text-blue-400 hover:text-blue-300 font-semibold text-sm inline-flex items-center space-x-2">
+                            <span>View Poster Summary & Details</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Coursework 3 Video Placeholder Section -->
+            <div class="glass-card rounded-3xl p-8 sm:p-10 border border-brand-border">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/20 text-cyan-400 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-video"></i>
+                            <span>Assignment Embed</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Coursework 3 Video Showcase</h3>
+                        <p class="text-slate-400 text-sm">Interactive video player placeholder for Coursework 3 demonstration and defense.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="px-3 py-1 rounded bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">Ready for Embedding</span>
+                    </div>
+                </div>
+
+                <!-- Video Player Mockup -->
+                <div class="relative w-full aspect-video rounded-2xl bg-brand-dark border border-brand-border overflow-hidden flex flex-col items-center justify-center group shadow-2xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://placehold.co/1200x675/0b1329/0284c7?text=Coursework+3+Video+Placeholder')"></div>
+                    <div class="relative z-10 text-center space-y-4 p-6">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-xl shadow-cyan-500/40 group-hover:scale-110 transition-transform cursor-pointer" onclick="alertVideoMessage('Coursework 3 Video player ready. You can embed your MP4 file or YouTube/Vimeo iframe here.')">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Coursework 3 Demonstration Video</h4>
+                            <p class="text-xs text-slate-300">Click play or replace with your video source URL in the code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section: Project DALOY & Presentation Video -->
+    <section id="projects" class="py-24 bg-brand-dark/50 relative border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold">Featured Capstone Project</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Project DALOY</h2>
+                <p class="text-slate-400">Drainage Assessment and Level Observation Yielding AI-Early-Warning System</p>
+            </div>
+
+            <!-- Project Details Card -->
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-brand-border mb-16 space-y-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-brand-500/20 text-cyan-400 text-xs font-bold">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>IoT & AI Integration</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">Smart Urban Flood Monitoring</h3>
+                        <p class="text-slate-300 text-leading-relaxed text-sm leading-relaxed">
+                            Project DALOY combines an <strong>ESP32 microcontroller</strong>, <strong>HC-SR04 ultrasonic water-level sensor</strong>, <strong>YF-S201 flow sensor</strong>, and <strong>ESP32-CAM</strong> to gather physical and visual information from open drainage areas. Camera data is processed via AI to detect visible debris, while sensor readings trigger normal, warning, or critical alerts over Wi-Fi.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-xs font-medium text-slate-300">
+                            <div class="p-3 rounded-xl bg-brand-dark/60 border border-brand-border flex items-center space-x-2">
+                                <i class="fa-solid fa-wifi text-cyan-400 text-base"></i>
+                                <span>Real-time Wi-Fi Dashboard</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark/60 border border-brand-border flex items-center space-x-2">
+                                <i class="fa-solid fa-brain text-cyan-400 text-base"></i>
+                                <span>AI Debris Detection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Architecture / Process Steps -->
+                    <div class="glass-card rounded-2xl p-6 space-y-4 bg-brand-card/80">
+                        <h4 class="text-lg font-bold text-white border-b border-brand-border pb-3">Process Pipeline</h4>
+                        <div class="space-y-3 text-xs text-slate-300">
+                            <div class="flex items-center space-x-3 p-2.5 rounded-lg bg-brand-dark/50">
+                                <span class="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">1</span>
+                                <span><strong>Sense & Collect:</strong> Ultrasonic & Flow sensors track water levels.</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-2.5 rounded-lg bg-brand-dark/50">
+                                <span class="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">2</span>
+                                <span><strong>Process & Detect:</strong> ESP32-CAM captures imagery for AI debris analysis.</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-2.5 rounded-lg bg-brand-dark/50">
+                                <span class="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">3</span>
+                                <span><strong>Respond & Monitor:</strong> Alerts sent to dashboard for proactive maintenance.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Presentation Video Placeholder Section -->
+            <div class="glass-card rounded-3xl p-8 sm:p-10 border border-brand-border">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-cyan-500/20 text-cyan-400 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-presentation-screen"></i>
+                            <span>Project Presentation</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Project Presentation Video</h3>
+                        <p class="text-slate-400 text-sm">Dedicated video player placeholder for Project DALOY defense and presentation.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="px-3 py-1 rounded bg-cyan-500/10 text-cyan-400 text-xs font-semibold border border-cyan-500/20">Group 4 Capstone</span>
+                    </div>
+                </div>
+
+                <!-- Video Player Mockup -->
+                <div class="relative w-full aspect-video rounded-2xl bg-brand-dark border border-brand-border overflow-hidden flex flex-col items-center justify-center group shadow-2xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://placehold.co/1200x675/0b1329/0ea5e9?text=Project+Presentation+Video+Placeholder')"></div>
+                    <div class="relative z-10 text-center space-y-4 p-6">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-xl shadow-cyan-500/40 group-hover:scale-110 transition-transform cursor-pointer" onclick="alertVideoMessage('Project Presentation Video player ready. Insert your project video link here.')">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Project DALOY Defense Presentation</h4>
+                            <p class="text-xs text-slate-300">Click to preview player placeholder.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Personal Journey & Reflection Section -->
+    <section id="journey" class="py-24 relative border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Personal Journey & Reflection</h2>
+                <p class="text-slate-400">Balancing engineering coursework, competitive sports, and maintaining the "All is well" mindset.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Balancing Discipline</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Juggling rigorous Computer Engineering subjects at Mapúa with intense volleyball and football training taught me invaluable time management and discipline.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">"All Is Well" Philosophy</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Inspired by the mindset of staying calm and determined under pressure when tackling difficult engineering formulas, projects, and unexpected challenges.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Future Vision</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Aiming to leverage my background in IoT, embedded systems, and AI to contribute to resilient smart cities and transformative engineering solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-dark/50 relative border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Build Something Amazing Together</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Whether you want to discuss engineering projects, collaboration opportunities in AI & IoT, or sports, feel free to reach out!
+                    </p>
+                    <div class="space-y-4 pt-2 text-sm text-slate-300">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-cyan-400 flex items-center justify-center"><i class="fa-solid fa-envelope"></i></div>
+                            <span>paouljarred.andrada@example.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-cyan-400 flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></div>
+                            <span>Mapúa University, Manila, Philippines</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-brand-border shadow-2xl">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white focus:outline-none focus:border-cyan-400 text-sm transition" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white focus:outline-none focus:border-cyan-400 text-sm transition" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white focus:outline-none focus:border-cyan-400 text-sm transition" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:opacity-95 transition text-sm">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-sm text-center font-medium">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-brand-dark border-t border-brand-border/40 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Paoul Jarred O. Andrada. All rights reserved. Mapúa University Computer Engineering.</p>
+            <div class="flex space-x-4">
+                <a href="#home" class="hover:text-cyan-400 transition">Back to Top <i class="fa-solid fa-arrow-up ml-1"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Dialog (Custom Message / Certificate / Reflection Viewer) -->
+    <div id="custom-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div class="glass-card max-w-2xl w-full rounded-3xl p-6 sm:p-8 border border-brand-border relative space-y-6 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal functions
+        const modal = document.getElementById('custom-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function openCertModal() {
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-purple-500/20 text-purple-400 text-xs font-bold">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Coursera Certificate</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Design Thinking for Innovation</h3>
+                    <p class="text-xs text-cyan-400">Authorized by University of Virginia & Offered through Coursera</p>
+                    <div class="p-4 rounded-xl bg-brand-dark border border-brand-border space-y-2 text-sm text-slate-300">
+                        <p><strong>Recipient:</strong> Paoul Jarred Andrada</p>
+                        <p><strong>Date:</strong> October 15, 2026</p>
+                        <p><strong>Instructor:</strong> Jeanne M. Liedtka (Professor of Business Administration, Darden School of Business)</p>
+                        <p class="text-xs text-slate-400 pt-2">Verify at: coursera.org/verify/9ARDCK93YZ60</p>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openReflectionModal() {
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-cyan-500/20 text-cyan-400 text-xs font-bold">
+                        <span>CPE101-4 Activity</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">College Reflection & Study Habits ("All is well")</h3>
+                    <p class="text-xs text-slate-400">By Paoul Jarred O. Andrada • September 9, 2026</p>
+                    <div class="space-y-3 text-sm text-slate-300 max-h-60 overflow-y-auto pr-2">
+                        <p><em>"All is well."</em> The simple statement from the movie 3 Idiots is my philosophy to deal with any situation when starting my life as an engineering student...</p>
+                        <p><strong>High School vs. College:</strong> College requires higher independence, proactive self-tracking, and fast-paced study habits to comprehend interrelated engineering concepts.</p>
+                        <p><strong>Time Management:</strong> Balancing lectures, studies, sleep, physical activity, and hobbies without stress.</p>
+                        <p><strong>Engineering Organization:</strong> Joining student chapters like ICpEP to build teamwork, communication, and leadership skills.</p>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openNstpModal() {
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-blue-500/20 text-blue-400 text-xs font-bold">
+                        <span>NSTP Community Engagement</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">National Service Training Program (NSTP)</h3>
+                    <p class="text-xs text-slate-400">Made by Paoul Jarred Andrada</p>
+                    <div class="space-y-3 text-sm text-slate-300">
+                        <p>NSTP empowers students to be responsible citizens who contribute to nation-building and community development.</p>
+                        <ul class="list-disc list-inside space-y-1 text-xs text-slate-300">
+                            <li>Develops Character and Values (Patriotism, discipline, integrity)</li>
+                            <li>Prepares for Leadership and Real-world Challenges</li>
+                            <li>Makes a Positive Impact on Communities</li>
+                        </ul>
+                        <p class="italic text-cyan-400 pt-2">"Be the reason why someone believes in the goodness of people."</p>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function alertVideoMessage(msg) {
+            // Safe custom message box instead of alert()
+            modalContent.innerHTML = `
+                <div class="space-y-4 text-center py-4">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Video Player Placeholder</h3>
+                    <p class="text-sm text-slate-300">${msg}</p>
+                    <button onclick="closeModal()" class="px-6 py-2 rounded-xl bg-cyan-500 text-white font-semibold text-sm">Got it</button>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Contact form handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            document.getElementById('form-success').classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                document.getElementById('form-success').classList.add('hidden');
+            }, 5000);
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
