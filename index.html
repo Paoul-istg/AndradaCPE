@@ -11,7 +11,7 @@
     <!-- Google Fonts: Inter & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -20,11 +20,12 @@
                 extend: {
                     colors: {
                         mapua: {
-                            red: '#900C3F',      /* Mapúa Cardinal Red Accent */
-                            redDark: '#6b002a',
-                            gold: '#FFC300',     /* Mapúa Gold Accent */
-                            goldDark: '#d4a000',
-                            navy: '#0F172A',
+                            red: '#7A0000',       /* Plain Mapúa Cardinal Red */
+                            redDark: '#580000',   /* Deep Red */
+                            gold: '#CC9900',      /* Mapúa Accent Gold */
+                            goldLight: '#E6B800', /* Soft Gold Highlight */
+                            slate: '#333333',     /* Plain Slate Text */
+                            bgLight: '#F8F9FA',   /* Plain Clean Light Background */
                         }
                     },
                     fontFamily: {
@@ -36,77 +37,68 @@
         }
     </script>
     <style>
-        /* Custom Customizations and Animations */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 231, 235, 0.7);
+        /* Minimalist Clean Borders and Clean Focus Rings */
+        .card-flat {
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
         }
-        .dark .glass-card {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(51, 65, 85, 0.7);
+        .dark .card-flat {
+            background-color: #1E293B;
+            border: 1px solid #334155;
         }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFC300 0%, #E65100 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .red-gradient-text {
-            background: linear-gradient(135deg, #C70039 0%, #900C3F 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .border-mapua-accent {
+            border-color: #7A0000;
         }
     </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+<body class="bg-mapua-bgLight dark:bg-slate-950 text-mapua-slate dark:text-slate-100 font-sans transition-colors duration-300">
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card border-b border-slate-200 dark:border-slate-800 shadow-sm" id="navbar">
+    <header class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Mapua CpE Logo / Brand -->
+                <!-- Mapúa Brand Badge -->
                 <a href="#home" class="flex items-center space-x-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-mapua-red flex items-center justify-center text-white font-heading font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    <div class="w-10 h-10 rounded-lg bg-mapua-red flex items-center justify-center text-white font-heading font-bold text-xl shadow-sm">
                         M
                     </div>
                     <div>
                         <span class="font-heading font-bold text-lg text-slate-900 dark:text-white block leading-tight">Juan Dela Cruz</span>
-                        <span class="text-xs text-mapua-red dark:text-mapua-gold font-medium tracking-wide uppercase">Computer Engineering • Mapúa</span>
+                        <span class="text-xs text-mapua-red dark:text-mapua-gold font-semibold tracking-wider uppercase">Computer Engineering • Mapúa</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden md:flex space-x-1 lg:space-x-6 text-sm font-medium">
-                    <a href="#home" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Home</a>
-                    <a href="#about" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">About Me</a>
-                    <a href="#coursework" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Coursework</a>
-                    <a href="#projects" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Projects & Papers</a>
-                    <a href="#journey" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Journey</a>
-                    <a href="#certificates" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Certificates</a>
-                    <a href="#contact" class="nav-link px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Contact</a>
+                    <a href="#home" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Home</a>
+                    <a href="#about" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">About Me</a>
+                    <a href="#coursework" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Coursework</a>
+                    <a href="#projects" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Projects & Papers</a>
+                    <a href="#journey" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Journey</a>
+                    <a href="#certificates" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Certificates</a>
+                    <a href="#contact" class="px-3 py-2 text-slate-700 dark:text-slate-200 hover:text-mapua-red dark:hover:text-mapua-gold transition-colors">Contact</a>
                 </nav>
 
-                <!-- Right Actions: Theme Toggle & Mobile Menu Button -->
+                <!-- Right Actions: Theme Toggle & Contact Button -->
                 <div class="flex items-center space-x-3">
-                    <button id="themeToggleBtn" aria-label="Toggle Dark Mode" class="p-2.5 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
-                        <i class="fa-solid fa-sun text-lg hidden dark:block text-mapua-gold"></i>
+                    <button id="themeToggleBtn" aria-label="Toggle Dark Mode" class="p-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-200 dark:border-slate-700">
+                        <i class="fa-solid fa-moon text-base dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-base hidden dark:block text-mapua-gold"></i>
                     </button>
 
-                    <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-mapua-red hover:bg-mapua-redDark rounded-lg shadow-md transition-all transform hover:-translate-y-0.5">
+                    <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-mapua-red hover:bg-mapua-redDark rounded-lg transition-colors">
                         Get In Touch
                     </a>
 
                     <!-- Mobile Menu Trigger -->
-                    <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="md:hidden p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800">
-                        <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                    <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="md:hidden p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                        <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Drawer Menu -->
+        <!-- Mobile Menu Drawer -->
         <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-2">
             <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
             <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About Me</a>
@@ -120,47 +112,43 @@
 
     <main class="pt-20">
         <!-- HERO / HOME SECTION -->
-        <section id="home" class="min-h-[90vh] flex items-center relative overflow-hidden py-12 lg:py-20">
-            <!-- Background Accent Blobs -->
-            <div class="absolute -top-24 -left-24 w-96 h-96 bg-mapua-red/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute top-1/2 -right-24 w-96 h-96 bg-mapua-gold/15 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <section id="home" class="min-h-[85vh] flex items-center py-12 lg:py-20 bg-mapua-bgLight dark:bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <!-- Left Hero Content -->
                     <div class="lg:col-span-7 text-center lg:text-left space-y-6">
-                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-mapua-red/10 dark:bg-mapua-red/20 border border-mapua-red/30 text-mapua-red dark:text-mapua-gold text-xs font-semibold tracking-wide uppercase">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-white dark:bg-slate-900 border border-mapua-red text-mapua-red dark:text-mapua-gold text-xs font-semibold tracking-wider uppercase">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <span>Mapúa University • School of EECE</span>
                         </div>
                         
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                            Building hardware & software for a <span class="red-gradient-text">smarter tomorrow.</span>
+                            Computer Engineering <span class="text-mapua-red">Student Portfolio</span>
                         </h1>
 
-                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                            Hello! I am <strong class="text-slate-900 dark:text-white font-semibold">[Your Full Name]</strong>, a dedicated 3rd-Year Computer Engineering student exploring embedded systems, digital logic, machine learning, and full-stack software development.
+                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Hello! I am <strong class="text-slate-900 dark:text-white font-semibold">[Your Full Name]</strong>, a 3rd-Year Computer Engineering student exploring embedded systems, digital logic design, machine learning, and hardware-software integration.
                         </p>
 
                         <!-- Mission Statement / Tagline Callout -->
-                        <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/80 border-l-4 border-mapua-red text-slate-700 dark:text-slate-300 text-sm italic">
-                            "<span id="hero-tagline">To bridge the gap between physical electronic hardware and modern intelligent software through rigorous engineering and continuous innovation.</span>"
+                        <div class="p-4 rounded-lg bg-white dark:bg-slate-900 border-l-4 border-mapua-red border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-sm italic">
+                            "<span id="hero-tagline">To bridge physical electronic hardware and modern intelligent software through rigorous engineering and continuous innovation.</span>"
                         </div>
 
                         <!-- CTA Action Buttons -->
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                            <a href="#projects" class="px-6 py-3 bg-mapua-red hover:bg-mapua-redDark text-white font-semibold rounded-xl shadow-lg shadow-mapua-red/20 transition-all transform hover:-translate-y-0.5 flex items-center space-x-2">
-                                <span>Explore My Projects</span>
+                            <a href="#projects" class="px-6 py-3 bg-mapua-red hover:bg-mapua-redDark text-white font-semibold text-sm rounded-lg transition-colors flex items-center space-x-2">
+                                <span>Explore Projects & Papers</span>
                                 <i class="fa-solid fa-arrow-right text-xs"></i>
                             </a>
-                            <a href="#coursework" class="px-6 py-3 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold rounded-xl transition-all">
+                            <a href="#coursework" class="px-6 py-3 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-sm rounded-lg border border-slate-300 dark:border-slate-700 transition-colors">
                                 View Coursework
                             </a>
                         </div>
 
-                        <!-- Quick Tech Stack Badges -->
-                        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-center lg:justify-start space-x-6 text-slate-400 dark:text-slate-500 text-2xl">
+                        <!-- Plain Tech Stack Badges -->
+                        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-center lg:justify-start space-x-6 text-slate-500 dark:text-slate-400 text-xl">
                             <i class="fa-brands fa-python hover:text-mapua-red transition-colors" title="Python"></i>
                             <i class="fa-solid fa-microchip hover:text-mapua-red transition-colors" title="Embedded C / C++"></i>
                             <i class="fa-brands fa-git-alt hover:text-mapua-red transition-colors" title="Git"></i>
@@ -169,45 +157,40 @@
                         </div>
                     </div>
 
-                    <!-- Right Hero Profile / Avatar Card -->
+                    <!-- Right Hero Profile Card -->
                     <div class="lg:col-span-5 flex justify-center">
-                        <div class="relative w-full max-w-sm">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-mapua-red to-mapua-gold rounded-3xl transform rotate-3 scale-105 opacity-80 blur-lg"></div>
-                            
-                            <div class="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-2xl text-center space-y-4">
-                                <!-- Profile Image Placeholder -->
-                                <div class="relative w-40 h-40 mx-auto rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-4 border-white dark:border-slate-800 shadow-inner group">
-                                    <img src="https://placehold.co/400x400/900C3F/FFFFFF?text=Student+Photo" alt="Profile photo placeholder of Student" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x400/900C3F/FFFFFF?text=CpE+Student'">
-                                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
-                                        Upload Photo
-                                    </div>
+                        <div class="w-full max-w-sm">
+                            <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm text-center space-y-4">
+                                <!-- Profile Photo Placeholder -->
+                                <div class="relative w-40 h-40 mx-auto rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-mapua-red">
+                                    <img src="https://placehold.co/400x400/7A0000/FFFFFF?text=Student+Photo" alt="Profile photo placeholder of Student" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/7A0000/FFFFFF?text=CpE+Student'">
                                 </div>
 
                                 <div>
                                     <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white">[Your Name Here]</h3>
                                     <p class="text-sm text-slate-500 dark:text-slate-400">BS Computer Engineering</p>
-                                    <p class="text-xs text-mapua-red dark:text-mapua-gold font-medium mt-1">Mapúa University - Intramuros / Viva Mapúa!</p>
+                                    <p class="text-xs text-mapua-red dark:text-mapua-gold font-semibold mt-1">Mapúa University - Intramuros</p>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-2 text-left pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
-                                    <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60">
+                                    <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800">
                                         <span class="block text-slate-400 font-medium">Year Level</span>
                                         <span class="font-bold text-slate-700 dark:text-slate-200">3rd Year</span>
                                     </div>
-                                    <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60">
+                                    <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800">
                                         <span class="block text-slate-400 font-medium">Specialization</span>
                                         <span class="font-bold text-slate-700 dark:text-slate-200">Embedded Systems</span>
                                     </div>
                                 </div>
 
                                 <div class="flex justify-center space-x-3 pt-2">
-                                    <a href="#" aria-label="GitHub Profile" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-mapua-red hover:text-white transition-colors">
+                                    <a href="#" aria-label="GitHub Profile" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-mapua-red hover:text-white transition-colors">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" aria-label="LinkedIn Profile" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-mapua-red hover:text-white transition-colors">
+                                    <a href="#" aria-label="LinkedIn Profile" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-mapua-red hover:text-white transition-colors">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </a>
-                                    <a href="#" aria-label="Email Address" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-mapua-red hover:text-white transition-colors">
+                                    <a href="#" aria-label="Email Address" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-mapua-red hover:text-white transition-colors">
                                         <i class="fa-solid fa-envelope"></i>
                                     </a>
                                 </div>
@@ -224,82 +207,78 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Background & Interests</h2>
+                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Background & Passion</h2>
                     <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">About Me</p>
-                    <div class="w-16 h-1 bg-mapua-red mx-auto rounded-full"></div>
+                    <div class="w-12 h-1 bg-mapua-red mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                     
-                    <!-- Biography & Narrative -->
+                    <!-- Narrative -->
                     <div class="lg:col-span-7 space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed text-base">
                         <p>
-                            I am currently pursuing my Bachelor of Science in Computer Engineering at <strong class="text-slate-900 dark:text-white">Mapúa University</strong>. Fueled by a strong curiosity for how computational hardware interfaces with complex mathematical and chemical models, I strive to design solutions that tackle real-world engineering challenges.
+                            I am currently pursuing my Bachelor of Science in Computer Engineering at <strong class="text-slate-900 dark:text-white">Mapúa University</strong>. Guided by the institution's tradition of engineering excellence, I focus on solving technical challenges at the intersection of hardware components and software logic.
                         </p>
                         <p>
-                            My academic journey at Mapúa has given me a rigorous foundation spanning advanced mathematics (Trigonometry, Calculus, Geometric Analysis), chemical and physical principles (Chemical Kinetics, Electrochemistry), and core engineering disciplines (Digital Logic, Assembly, Circuit Analysis).
+                            My academic curriculum at Mapúa has established a firm grounding in essential mathematics (Trigonometry, Vector Geometry, Calculus), fundamental sciences (Chemical Kinetics, Reaction Rates, Electrochemistry), and core engineering domains (Digital Systems, Assembly Language, Circuit Analysis).
                         </p>
                         <p>
-                            Beyond coursework, I am passionate about exploring Internet of Things (IoT) applications, sustainable energy monitoring systems, and collaborative technical research.
+                            I aim to apply my technical background toward building real-world Internet of Things (IoT) hardware prototypes, embedded monitoring units, and efficient software applications.
                         </p>
 
-                        <!-- Key Highlights / Extracurriculars -->
+                        <!-- Key Highlights -->
                         <div class="pt-4">
-                            <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mb-3">Notable Achievements & Organizations</h3>
+                            <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mb-3">Extracurriculars & Achievements</h3>
                             <ul class="space-y-2 text-sm">
                                 <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-check-circle text-mapua-red dark:text-mapua-gold mt-1"></i>
-                                    <span><strong>Member, ICpEP.SE Mapúa Student Chapter:</strong> Active participation in workshops and university-wide hackathons.</span>
+                                    <i class="fa-solid fa-square-check text-mapua-red dark:text-mapua-gold mt-1"></i>
+                                    <span><strong>Member, ICpEP.SE Mapúa Student Chapter:</strong> Participated in technical seminars and university hackathons.</span>
                                 </li>
                                 <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-check-circle text-mapua-red dark:text-mapua-gold mt-1"></i>
-                                    <span><strong>Academic Excellence / Honor List:</strong> Consistently maintaining strong academic standing in quarter systems.</span>
+                                    <i class="fa-solid fa-square-check text-mapua-red dark:text-mapua-gold mt-1"></i>
+                                    <span><strong>Academic Honors:</strong> Maintaining strong performance across Mapúa's quarter terms.</span>
                                 </li>
                                 <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-check-circle text-mapua-red dark:text-mapua-gold mt-1"></i>
-                                    <span><strong>Coursera Certified Specialist:</strong> Completed professional learning tracks in IoT and Python development.</span>
+                                    <i class="fa-solid fa-square-check text-mapua-red dark:text-mapua-gold mt-1"></i>
+                                    <span><strong>Coursera Certified Learner:</strong> Completed online specialized coursework in IoT microcontrollers and Python.</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Technical Skills & Competencies Grid -->
+                    <!-- Plain Core Competencies Grid -->
                     <div class="lg:col-span-5 space-y-6">
-                        <div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-6">
+                        <div class="bg-mapua-bgLight dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-6">
                             <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white flex items-center space-x-2">
-                                <i class="fa-solid fa-gears text-mapua-red dark:text-mapua-gold"></i>
-                                <span>Core Competencies</span>
+                                <i class="fa-solid fa-microchip text-mapua-red dark:text-mapua-gold"></i>
+                                <span>Technical Competencies</span>
                             </h3>
 
-                            <!-- Skill Category 1 -->
                             <div>
-                                <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Programming Languages</span>
+                                <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Languages</span>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">C / C++</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Python</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">JavaScript</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Assembly x86</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">C / C++</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Python</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Assembly x86</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">HTML / JS</span>
                                 </div>
                             </div>
 
-                            <!-- Skill Category 2 -->
                             <div>
-                                <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Hardware & Circuitry</span>
+                                <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Hardware & Tools</span>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Arduino / ESP32</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Digital Logic Synthesis</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Multisim / LTSpice</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Microcontrollers</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Arduino / ESP32</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Digital Logic</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">LTSpice / Multisim</span>
                                 </div>
                             </div>
 
-                            <!-- Skill Category 3 -->
                             <div>
-                                <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Mathematics & Engineering Fundamentals</span>
+                                <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Mathematics & Science</span>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Trigonometry & Analysis</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Chemical Kinetics</span>
-                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700">Electrochemistry</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Trigonometry</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Chemical Kinetics</span>
+                                    <span class="px-3 py-1 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded border border-slate-200 dark:border-slate-700">Electrochemistry</span>
                                 </div>
                             </div>
 
@@ -311,111 +290,108 @@
             </div>
         </section>
 
-        <!-- COURSEWORK SECTION (WITH explicit PLACEHOLDERS) -->
-        <section id="coursework" class="py-20">
+        <!-- COURSEWORK SECTION (WITH PLACEHOLDERS FOR COURSEWORK 1, 2, 3) -->
+        <section id="coursework" class="py-20 bg-mapua-bgLight dark:bg-slate-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Academic Foundations</h2>
+                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Academic Modules</h2>
                     <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Featured Coursework</p>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Key engineering, mathematics, and science modules that have shaped my analytical problem-solving skills.</p>
-                    <div class="w-16 h-1 bg-mapua-red mx-auto rounded-full"></div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Key engineering, mathematics, and chemistry modules completed at Mapúa University.</p>
+                    <div class="w-12 h-1 bg-mapua-red mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Coursework Card 1: Trigonometry & Geometric Analysis -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-mapua-red transition-all">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="px-3 py-1 text-xs font-bold rounded-full bg-red-100 dark:bg-red-950/60 text-mapua-red dark:text-red-400">MATH101 / MATH102</span>
-                                <i class="fa-solid fa-shapes text-slate-400 group-hover:text-mapua-red transition-colors text-xl"></i>
+                                <span class="px-2.5 py-1 text-xs font-bold rounded bg-slate-100 dark:bg-slate-800 text-mapua-red dark:text-mapua-gold border border-slate-200 dark:border-slate-700">MATH101</span>
+                                <i class="fa-solid fa-shapes text-slate-400 text-lg"></i>
                             </div>
 
                             <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white">Coursework 1: Trigonometry & Geometric Analysis</h3>
 
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                                Comprehensive study of trigonometric functions, vector spaces, coordinate transformations, and geometric algorithms relevant for engineering modeling and computer graphics physics.
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Detailed study of trigonometric functions, vector spaces, polar coordinate systems, and geometric modeling for engineering computations.
                             </p>
 
                             <div class="pt-2">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Key Skills Acquired</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Key Topics Learned</span>
                                 <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Vector Math</span>
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Analytic Geometry</span>
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Polar Coordinates</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-700 dark:text-slate-300">Vector Math</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-700 dark:text-slate-300">Analytic Geometry</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
-                            <button onclick="openModal('coursework1Modal')" class="w-full py-2.5 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('coursework1Modal')" class="w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-folder-open"></i>
-                                <span>View Course Material & Notes</span>
+                                <span>View Course Material</span>
                             </button>
                         </div>
                     </div>
 
                     <!-- Coursework Card 2: General Chemistry & Chemical Kinetics -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-mapua-red transition-all">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="px-3 py-1 text-xs font-bold rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400">CHEM101</span>
-                                <i class="fa-solid fa-flask text-slate-400 group-hover:text-mapua-gold transition-colors text-xl"></i>
+                                <span class="px-2.5 py-1 text-xs font-bold rounded bg-slate-100 dark:bg-slate-800 text-mapua-red dark:text-mapua-gold border border-slate-200 dark:border-slate-700">CHEM101</span>
+                                <i class="fa-solid fa-flask text-slate-400 text-lg"></i>
                             </div>
 
                             <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white">Coursework 2: General Chemistry & Kinetics</h3>
 
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                                Investigation into reaction rates, activation energy equations, stoichiometry, and thermochemistry. Examined chemical reaction computational models for materials in hardware electronics.
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Investigation into reaction rate laws, activation energy, Arrhenius equation modeling, and thermochemistry applications for hardware materials.
                             </p>
 
                             <div class="pt-2">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Key Skills Acquired</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Key Topics Learned</span>
                                 <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Rate Laws</span>
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Arrhenius Equation</span>
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Data Modeling</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-700 dark:text-slate-300">Reaction Kinetics</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-700 dark:text-slate-300">Rate Equations</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
-                            <button onclick="openModal('coursework2Modal')" class="w-full py-2.5 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('coursework2Modal')" class="w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-folder-open"></i>
-                                <span>View Lab Reports & Experiments</span>
+                                <span>View Lab Reports</span>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Coursework Card 3: Electrochemistry & Circuit Fundamentals -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <!-- Coursework Card 3: Electrochemistry & Circuit Analysis -->
+                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:border-mapua-red transition-all">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="px-3 py-1 text-xs font-bold rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400">CPE201</span>
-                                <i class="fa-solid fa-bolt text-slate-400 group-hover:text-blue-500 transition-colors text-xl"></i>
+                                <span class="px-2.5 py-1 text-xs font-bold rounded bg-slate-100 dark:bg-slate-800 text-mapua-red dark:text-mapua-gold border border-slate-200 dark:border-slate-700">CPE201</span>
+                                <i class="fa-solid fa-bolt text-slate-400 text-lg"></i>
                             </div>
 
                             <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white">Coursework 3: Electrochemistry & Circuits</h3>
 
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                                Understanding battery cells, redox reactions, galvanic processes, and their integration with fundamental DC/AC circuit analysis, Kirchhoff's Laws, and power dissipation.
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Understanding battery cells, redox reactions, galvanic processes, and their integration with Kirchhoff's laws and DC circuit analysis.
                             </p>
 
                             <div class="pt-2">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Key Skills Acquired</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Key Topics Learned</span>
                                 <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Nernst Equation</span>
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Nodal Analysis</span>
-                                    <span class="px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-700 dark:text-slate-300">Battery Systems</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-700 dark:text-slate-300">Redox Reactions</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-700 dark:text-slate-300">Nodal Analysis</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
-                            <button onclick="openModal('coursework3Modal')" class="w-full py-2.5 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('coursework3Modal')" class="w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-folder-open"></i>
-                                <span>View Schematics & Assignments</span>
+                                <span>View Schematics & Notes</span>
                             </button>
                         </div>
                     </div>
@@ -426,111 +402,110 @@
         </section>
 
         <!-- PROJECTS & PAPERS SECTION (WITH PLACEHOLDERS FOR PROJECT PAPER & DEMO VIDEO) -->
-        <section id="projects" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+        <section id="projects" class="py-20 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Practical Implementations</h2>
-                    <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Engineering Projects & Papers</p>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">A showcase of design projects, academic research position papers, and live video demonstrations.</p>
-                    <div class="w-16 h-1 bg-mapua-red mx-auto rounded-full"></div>
+                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Practical Engineering Work</h2>
+                    <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Projects & Research Papers</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Demonstrations of hardware prototypes, position papers, and presentation media.</p>
+                    <div class="w-12 h-1 bg-mapua-red mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     
-                    <!-- Card 1: Featured Design Engineering Project -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-md flex flex-col justify-between">
+                    <!-- Card 1: Main Engineering Project -->
+                    <div class="bg-mapua-bgLight dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
                         <div>
-                            <div class="relative h-48 bg-slate-800 overflow-hidden group">
-                                <img src="https://placehold.co/600x400/1e293b/FFFFFF?text=Embedded+Hardware+Project" alt="Hardware Project Thumbnail Placeholder" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/1e293b/FFFFFF?text=Project+Image'">
-                                <div class="absolute top-3 right-3 px-2.5 py-1 bg-mapua-red text-white text-[10px] font-bold rounded uppercase tracking-wider">
+                            <div class="relative h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center border-b border-slate-200 dark:border-slate-700">
+                                <img src="https://placehold.co/600x400/7A0000/FFFFFF?text=Hardware+Project+Image" alt="Hardware Project Thumbnail Placeholder" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/7A0000/FFFFFF?text=Project+Thumbnail'">
+                                <span class="absolute top-3 right-3 px-2 py-0.5 bg-mapua-red text-white text-[10px] font-bold uppercase rounded">
                                     Hardware & IoT
-                                </div>
+                                </span>
                             </div>
                             <div class="p-6 space-y-3">
-                                <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white">Smart Micro-Grid Battery Monitoring System</h3>
+                                <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white">Micro-Grid Battery Monitoring System</h3>
                                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                    An ESP32-powered electrochemical sensor system that calculates remaining battery health using real-time voltage decay curves and transmits analytics to a cloud dashboard.
+                                    An ESP32-powered electrochemical sensor unit measuring real-time battery degradation curves and streaming metrics via MQTT.
                                 </p>
-                                <div class="flex flex-wrap gap-1.5 pt-2">
-                                    <span class="px-2 py-1 text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">ESP32 / C++</span>
-                                    <span class="px-2 py-1 text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">IoT Sensors</span>
-                                    <span class="px-2 py-1 text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">MQTT</span>
+                                <div class="flex flex-wrap gap-1 pt-2">
+                                    <span class="px-2 py-0.5 text-[10px] font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700">ESP32</span>
+                                    <span class="px-2 py-0.5 text-[10px] font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700">C++</span>
+                                    <span class="px-2 py-0.5 text-[10px] font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 rounded border border-slate-200 dark:border-slate-700">MQTT</span>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6 pt-0">
-                            <button onclick="openModal('projectDetailModal')" class="w-full py-2 bg-mapua-red hover:bg-mapua-redDark text-white text-xs font-semibold rounded-lg transition-colors">
-                                View Project Details
+                            <button onclick="openModal('projectDetailModal')" class="w-full py-2 bg-mapua-red hover:bg-mapua-redDark text-white text-xs font-semibold rounded transition-colors">
+                                View Technical Specifications
                             </button>
                         </div>
                     </div>
 
                     <!-- Card 2: Dedicated PROJECT PAPER Placeholder Slot -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-md relative group">
+                    <div class="bg-mapua-bgLight dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-                                <span class="px-2.5 py-1 bg-red-100 dark:bg-red-950 text-mapua-red dark:text-red-400 text-xs font-bold rounded-md">
-                                    <i class="fa-solid fa-file-pdf mr-1"></i> Academic Research Paper
+                            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+                                <span class="px-2 py-0.5 bg-white dark:bg-slate-900 text-mapua-red dark:text-mapua-gold text-xs font-bold rounded border border-slate-200 dark:border-slate-700">
+                                    <i class="fa-solid fa-file-pdf mr-1"></i> Project Paper
                                 </span>
-                                <span class="text-xs text-slate-400">PDF Format</span>
+                                <span class="text-xs text-slate-400">PDF Document</span>
                             </div>
 
-                            <div class="text-center py-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
-                                <i class="fa-solid fa-file-lines text-4xl text-mapua-red dark:text-mapua-gold mb-2"></i>
-                                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-base">Project Paper Placeholder</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 px-4 mt-1">
-                                    [e.g., SDG Sustainable Energy Position Paper / E-Commerce System Evaluation Paper]
+                            <div class="text-center py-6 bg-white dark:bg-slate-900 rounded-lg border border-dashed border-slate-300 dark:border-slate-700">
+                                <i class="fa-solid fa-file-lines text-3xl text-mapua-red dark:text-mapua-gold mb-2"></i>
+                                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-sm">Project Paper Placeholder</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 px-2 mt-1">
+                                    [e.g., Sustainable Energy Position Paper / Systems Research]
                                 </p>
                             </div>
 
-                            <div class="space-y-2">
-                                <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">Abstract Summary:</p>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed italic">
-                                    "This research examines the feasibility of optimizing energy dissipation in embedded microcontrollers through kinetic modeling..."
+                            <div class="space-y-1">
+                                <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">Abstract Excerpt:</p>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic">
+                                    "This research evaluates electrochemical rate constants to optimize power consumption models in embedded devices..."
                                 </p>
                             </div>
                         </div>
 
-                        <div class="pt-6 space-y-2">
-                            <button onclick="openModal('projectPaperModal')" class="w-full py-2.5 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 hover:bg-mapua-red dark:hover:bg-mapua-gold dark:hover:text-slate-950 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                        <div class="pt-6">
+                            <button onclick="openModal('projectPaperModal')" class="w-full py-2 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 hover:bg-mapua-red dark:hover:bg-mapua-gold text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-eye"></i>
-                                <span>Preview / Read Paper</span>
+                                <span>Preview Research Paper</span>
                             </button>
                         </div>
                     </div>
 
                     <!-- Card 3: Dedicated PROJECT VIDEO DEMO Placeholder Slot -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-md">
+                    <div class="bg-mapua-bgLight dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-                                <span class="px-2.5 py-1 bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-mapua-gold text-xs font-bold rounded-md">
-                                    <i class="fa-solid fa-video mr-1"></i> Presentation & Vlog
+                            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+                                <span class="px-2 py-0.5 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-bold rounded border border-slate-200 dark:border-slate-700">
+                                    <i class="fa-solid fa-video mr-1"></i> Video Presentation
                                 </span>
-                                <span class="text-xs text-slate-400">Embedded Video</span>
+                                <span class="text-xs text-slate-400">Media Demo</span>
                             </div>
 
-                            <!-- Responsive Video Placeholder Container -->
-                            <div class="relative w-full aspect-video bg-slate-950 rounded-xl overflow-hidden flex items-center justify-center group">
-                                <img src="https://placehold.co/600x340/0f172a/FFFFFF?text=Project+Video+Thumbnail" alt="Project Video Demo Placeholder Thumbnail" class="w-full h-full object-cover opacity-80" onerror="this.src='https://placehold.co/600x340/0f172a/FFFFFF?text=Video+Placeholder'">
+                            <div class="relative w-full aspect-video bg-slate-900 rounded-lg overflow-hidden flex items-center justify-center">
+                                <img src="https://placehold.co/600x340/333333/FFFFFF?text=Video+Demo+Thumbnail" alt="Project Video Demo Placeholder Thumbnail" class="w-full h-full object-cover opacity-70" onerror="this.src='https://placehold.co/600x340/333333/FFFFFF?text=Video+Placeholder'">
                                 
-                                <button onclick="openModal('projectVideoModal')" class="absolute w-12 h-12 rounded-full bg-mapua-red text-white flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-play ml-1 text-lg"></i>
+                                <button onclick="openModal('projectVideoModal')" class="absolute w-11 h-11 rounded-full bg-mapua-red text-white flex items-center justify-center shadow-md">
+                                    <i class="fa-solid fa-play ml-0.5 text-base"></i>
                                 </button>
                             </div>
 
                             <div>
-                                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-base">Project Video Presentation Placeholder</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                                    A 3-minute video walk-through explaining system architecture, experimental testbench setup, and live demonstration results.
+                                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-sm">Project Video Demo Placeholder</h4>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                                    A video demonstration highlighting hardware circuit assembly, firmware execution, and data analysis.
                                 </p>
                             </div>
                         </div>
 
                         <div class="pt-4">
-                            <button onclick="openModal('projectVideoModal')" class="w-full py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('projectVideoModal')" class="w-full py-2 bg-slate-200 dark:bg-slate-700 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-circle-play"></i>
-                                <span>Watch Video Demo</span>
+                                <span>Watch Video Presentation</span>
                             </button>
                         </div>
                     </div>
@@ -540,81 +515,73 @@
             </div>
         </section>
 
-        <!-- PERSONAL JOURNEY SECTION (NARRATIVE & VLOG REFLECTION) -->
-        <section id="journey" class="py-20 bg-white dark:bg-slate-900">
+        <!-- PERSONAL JOURNEY SECTION -->
+        <section id="journey" class="py-20 bg-mapua-bgLight dark:bg-slate-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Growth & Reflections</h2>
+                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Academic Timeline</h2>
                     <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">My Mapúa Experience</p>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Reflecting on the fast-paced academic environment, late-night hardware debugging, and personal growth.</p>
-                    <div class="w-16 h-1 bg-mapua-red mx-auto rounded-full"></div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Reflections on academic rigor, problem-solving, and personal evolution.</p>
+                    <div class="w-12 h-1 bg-mapua-red mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
-                    <!-- Timeline Narrative -->
+                    <!-- Timeline Steps -->
                     <div class="lg:col-span-7 space-y-8">
-                        <div class="relative border-l-2 border-mapua-red/30 pl-6 space-y-8 ml-3">
+                        <div class="relative border-l-2 border-mapua-red pl-6 space-y-8 ml-3">
                             
-                            <!-- Milestone 1 -->
                             <div class="relative">
-                                <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-mapua-red border-4 border-white dark:border-slate-900"></div>
-                                <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase">First Year • Laying Foundations</span>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mt-1">Adapting to the Rigorous Pace</h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                                    Entering Mapúa University introduced me to an intense academic rhythm. Balancing rigorous mathematics like Trigonometry with foundational engineering sciences tested my resilience and taught me essential time-management strategies early on.
+                                <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-mapua-red border-4 border-white dark:border-slate-950"></div>
+                                <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase">1st Year • Foundational Sciences</span>
+                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mt-1">Adapting to Mapúa's Pace</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                                    Transitioning into Mapúa required building discipline for continuous quarter terms while mastering core Trigonometry, Chemistry, and Analytical Geometry modules.
                                 </p>
                             </div>
 
-                            <!-- Milestone 2 -->
                             <div class="relative">
-                                <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-mapua-gold border-4 border-white dark:border-slate-900"></div>
-                                <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase">Second Year • Deep Technical Core</span>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mt-1">Bridging Physical Concepts with Logic</h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                                    Connecting chemical kinetics and electrochemistry to semiconductor behavior gave me a unique appreciation for hardware engineering. Overcoming complex lab circuit debugging taught me patience and methodological troubleshooting.
+                                <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-mapua-gold border-4 border-white dark:border-slate-950"></div>
+                                <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase">2nd Year • Circuit Core</span>
+                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mt-1">Integrating Physics and Logic</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                                    Connecting electrochemical cell fundamentals to semiconductor circuit models provided a clear view of physical hardware design.
                                 </p>
                             </div>
 
-                            <!-- Milestone 3 -->
                             <div class="relative">
-                                <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-mapua-red border-4 border-white dark:border-slate-900"></div>
-                                <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase">Third Year & Beyond • Innovation & Design</span>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mt-1">Building Complete Embedded Solutions</h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                                    Now focused on capstone research, IoT applications, and high-level software integration. I feel prepared to take on complex engineering roles and contribute meaningfully to the technology sector.
+                                <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-mapua-red border-4 border-white dark:border-slate-950"></div>
+                                <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase">3rd Year • Embedded Systems</span>
+                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mt-1">Building Complete Hardware Solutions</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                                    Currently focusing on microcontrollers, IoT data telemetry, and technical research ready for real-world engineering deployment.
                                 </p>
                             </div>
 
                         </div>
                     </div>
 
-                    <!-- Personal Vlog / Reflection Box -->
-                    <div class="lg:col-span-5 bg-slate-50 dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-mapua-red/10 flex items-center justify-center text-mapua-red dark:text-mapua-gold">
-                                <i class="fa-solid fa-quote-left text-lg"></i>
-                            </div>
+                    <!-- Plain Narrative Card -->
+                    <div class="lg:col-span-5 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 space-y-4">
+                        <div class="flex items-center space-x-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+                            <i class="fa-solid fa-quote-left text-2xl text-mapua-red dark:text-mapua-gold"></i>
                             <div>
-                                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-base">Student Vlog / Reflection Note</h4>
+                                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-base">Student Narrative Reflection</h4>
                                 <span class="text-xs text-slate-400">Written by Juan Dela Cruz</span>
                             </div>
                         </div>
 
                         <blockquote class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic leading-relaxed">
-                            "Being a Mapúan CpE student isn't just about passing technical exams; it's about learning how to solve problems when your initial design fails. Mapúa taught me grit, critical thinking, and the power of collaborative teamwork."
+                            "Studying Computer Engineering at Mapúa University instills resilience and methodical problem-solving. It teaches you to analyze failures thoroughly until you find a working solution."
                         </blockquote>
 
-                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <i class="fa-solid fa-clapperboard text-mapua-red dark:text-mapua-gold text-xl"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-slate-900 dark:text-white">Personal Journey Reflection Vlog</span>
-                                    <span class="text-[10px] text-slate-400">Duration: 4 mins • HD</span>
-                                </div>
+                        <div class="p-3 rounded-lg bg-mapua-bgLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-clapperboard text-mapua-red dark:text-mapua-gold"></i>
+                                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">Journey Vlog Recording</span>
                             </div>
-                            <button onclick="openModal('projectVideoModal')" class="px-3 py-1.5 bg-mapua-red text-white text-xs font-semibold rounded-lg hover:bg-mapua-redDark transition-colors">
+                            <button onclick="openModal('projectVideoModal')" class="px-3 py-1 bg-mapua-red text-white text-xs font-semibold rounded hover:bg-mapua-redDark transition-colors">
                                 Play
                             </button>
                         </div>
@@ -625,109 +592,109 @@
             </div>
         </section>
 
-        <!-- CERTIFICATES & MEDIA SECTION (WITH COURSERA CERTIFICATE PLACEHOLDERS) -->
-        <section id="certificates" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+        <!-- CERTIFICATES & MEDIA SECTION -->
+        <section id="certificates" class="py-20 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Verified Credentials</h2>
-                    <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Certificates & Media</p>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Professional development credentials completed through Coursera and industry partners.</p>
-                    <div class="w-16 h-1 bg-mapua-red mx-auto rounded-full"></div>
+                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Verified Learning</h2>
+                    <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Certificates & Credentials</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Online certifications and institutional seminar recognition.</p>
+                    <div class="w-12 h-1 bg-mapua-red mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Coursera Certificate Card 1 -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all">
+                    <div class="bg-mapua-bgLight dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950/60 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-lg">
-                                    C
-                                </div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded">Coursera Certified</span>
+                                <span class="px-2 py-0.5 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-bold rounded border border-slate-200 dark:border-slate-700">
+                                    Coursera
+                                </span>
+                                <i class="fa-solid fa-award text-slate-400 text-lg"></i>
                             </div>
 
                             <div>
-                                <h3 class="font-heading font-bold text-slate-900 dark:text-white text-lg">Coursera Certificate 1</h3>
+                                <h3 class="font-heading font-bold text-slate-900 dark:text-white text-base">Coursera Certificate 1</h3>
                                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                                    e.g., Introduction to Embedded Systems & Microcontrollers (UC Irvine)
+                                    e.g., Introduction to Embedded Systems & Microcontrollers
                                 </p>
                             </div>
 
-                            <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-dashed border-slate-200 dark:border-slate-700 text-center">
-                                <i class="fa-solid fa-award text-3xl text-mapua-gold mb-1"></i>
-                                <span class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300">Coursera Certificate Badge Placeholder</span>
-                                <span class="text-[10px] text-slate-400">Issued Grade: 98.5%</span>
+                            <div class="p-4 bg-white dark:bg-slate-900 rounded-lg border border-dashed border-slate-300 dark:border-slate-700 text-center">
+                                <i class="fa-solid fa-certificate text-3xl text-mapua-gold mb-1"></i>
+                                <span class="block text-xs font-semibold text-slate-800 dark:text-slate-200">Credential Badge Placeholder</span>
+                                <span class="text-[10px] text-slate-400">Grade Achieved: 98.5%</span>
                             </div>
                         </div>
 
                         <div class="pt-6">
-                            <button onclick="openModal('courseraCertModal1')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('courseraCertModal1')" class="w-full py-2 bg-slate-200 dark:bg-slate-700 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-certificate"></i>
-                                <span>View Credential Preview</span>
+                                <span>Preview Credential</span>
                             </button>
                         </div>
                     </div>
 
                     <!-- Coursera Certificate Card 2 -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all">
+                    <div class="bg-mapua-bgLight dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950/60 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-lg">
-                                    C
-                                </div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded">Coursera Certified</span>
+                                <span class="px-2 py-0.5 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-bold rounded border border-slate-200 dark:border-slate-700">
+                                    Coursera
+                                </span>
+                                <i class="fa-solid fa-award text-slate-400 text-lg"></i>
                             </div>
 
                             <div>
-                                <h3 class="font-heading font-bold text-slate-900 dark:text-white text-lg">Coursera Certificate 2</h3>
+                                <h3 class="font-heading font-bold text-slate-900 dark:text-white text-base">Coursera Certificate 2</h3>
                                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                                    e.g., Python Data Structures & Algorithmic Thinking (University of Michigan)
+                                    e.g., Python Data Structures & Algorithms
                                 </p>
                             </div>
 
-                            <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-dashed border-slate-200 dark:border-slate-700 text-center">
-                                <i class="fa-solid fa-award text-3xl text-mapua-gold mb-1"></i>
-                                <span class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300">Coursera Certificate Badge Placeholder</span>
-                                <span class="text-[10px] text-slate-400">Issued Grade: 99.0%</span>
+                            <div class="p-4 bg-white dark:bg-slate-900 rounded-lg border border-dashed border-slate-300 dark:border-slate-700 text-center">
+                                <i class="fa-solid fa-certificate text-3xl text-mapua-gold mb-1"></i>
+                                <span class="block text-xs font-semibold text-slate-800 dark:text-slate-200">Credential Badge Placeholder</span>
+                                <span class="text-[10px] text-slate-400">Grade Achieved: 99.0%</span>
                             </div>
                         </div>
 
                         <div class="pt-6">
-                            <button onclick="openModal('courseraCertModal2')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('courseraCertModal2')" class="w-full py-2 bg-slate-200 dark:bg-slate-700 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-certificate"></i>
-                                <span>View Credential Preview</span>
+                                <span>Preview Credential</span>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Additional Cert / Workshop Placeholder Card -->
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-sm hover:shadow-lg transition-all">
+                    <!-- Seminar Certificate Card -->
+                    <div class="bg-mapua-bgLight dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <div class="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-950/60 flex items-center justify-center text-mapua-red dark:text-red-400 font-bold text-lg">
-                                    M
-                                </div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded">Mapúa Workshop</span>
+                                <span class="px-2 py-0.5 bg-white dark:bg-slate-900 text-mapua-red dark:text-mapua-gold text-xs font-bold rounded border border-slate-200 dark:border-slate-700">
+                                    Mapúa Workshop
+                                </span>
+                                <i class="fa-solid fa-ribbon text-slate-400 text-lg"></i>
                             </div>
 
                             <div>
-                                <h3 class="font-heading font-bold text-slate-900 dark:text-white text-lg">ICpEP Technical Seminar</h3>
+                                <h3 class="font-heading font-bold text-slate-900 dark:text-white text-base">ICpEP Seminar Certificate</h3>
                                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                                    Certificate of Participation in Modern Microcontroller Architecture
+                                    Certificate of Participation in Modern Microcontrollers
                                 </p>
                             </div>
 
-                            <div class="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-dashed border-slate-200 dark:border-slate-700 text-center">
-                                <i class="fa-solid fa-ribbon text-3xl text-mapua-red dark:text-mapua-gold mb-1"></i>
-                                <span class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300">Seminar Certificate Placeholder</span>
-                                <span class="text-[10px] text-slate-400">Issued: Mapúa University</span>
+                            <div class="p-4 bg-white dark:bg-slate-900 rounded-lg border border-dashed border-slate-300 dark:border-slate-700 text-center">
+                                <i class="fa-solid fa-award text-3xl text-mapua-red mb-1"></i>
+                                <span class="block text-xs font-semibold text-slate-800 dark:text-slate-200">Workshop Certificate Placeholder</span>
+                                <span class="text-[10px] text-slate-400">Issued: Mapúa ICpEP Chapter</span>
                             </div>
                         </div>
 
                         <div class="pt-6">
-                            <button onclick="openModal('seminarCertModal')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-mapua-red hover:text-white text-slate-700 dark:text-slate-200 text-xs font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="openModal('seminarCertModal')" class="w-full py-2 bg-slate-200 dark:bg-slate-700 hover:bg-mapua-red hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-certificate"></i>
                                 <span>View Certificate</span>
                             </button>
@@ -740,110 +707,105 @@
         </section>
 
         <!-- CONTACT INFORMATION & INTERACTIVE FORM -->
-        <section id="contact" class="py-20 bg-white dark:bg-slate-900">
+        <section id="contact" class="py-20 bg-mapua-bgLight dark:bg-slate-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Connect With Me</h2>
-                    <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Get In Touch</p>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm">Have a question or interested in collaborating on an engineering project? Send a message!</p>
-                    <div class="w-16 h-1 bg-mapua-red mx-auto rounded-full"></div>
+                    <h2 class="text-xs font-bold text-mapua-red dark:text-mapua-gold uppercase tracking-widest">Communication</h2>
+                    <p class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 dark:text-white">Contact Information</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Send a message for academic inquiries or technical collaboration.</p>
+                    <div class="w-12 h-1 bg-mapua-red mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     
-                    <!-- Left Contact Info Details -->
+                    <!-- Left Details -->
                     <div class="lg:col-span-5 space-y-8">
-                        <div class="space-y-4">
-                            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white">Contact Details</h3>
+                        <div class="space-y-3">
+                            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white">Reach Out</h3>
                             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                I am open to technical inquiries, research collaborations, internships, and project discussions.
+                                Feel free to get in touch regarding computer engineering research, course projects, or internship inquiries.
                             </p>
                         </div>
 
                         <div class="space-y-4">
-                            <!-- Detail Item 1 -->
                             <div class="flex items-start space-x-4">
-                                <div class="w-11 h-11 rounded-xl bg-mapua-red/10 dark:bg-mapua-red/20 flex items-center justify-center text-mapua-red dark:text-mapua-gold flex-shrink-0">
-                                    <i class="fa-solid fa-envelope text-lg"></i>
+                                <div class="w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-mapua-red dark:text-mapua-gold flex-shrink-0">
+                                    <i class="fa-solid fa-envelope text-base"></i>
                                 </div>
                                 <div>
-                                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Mapúa Student Email</span>
+                                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Student Email</span>
                                     <a href="mailto:jdelacruz@mymail.mapua.edu.ph" class="text-sm font-bold text-slate-800 dark:text-slate-200 hover:text-mapua-red transition-colors">
                                         jdelacruz@mymail.mapua.edu.ph
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- Detail Item 2 -->
                             <div class="flex items-start space-x-4">
-                                <div class="w-11 h-11 rounded-xl bg-mapua-red/10 dark:bg-mapua-red/20 flex items-center justify-center text-mapua-red dark:text-mapua-gold flex-shrink-0">
-                                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+                                <div class="w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-mapua-red dark:text-mapua-gold flex-shrink-0">
+                                    <i class="fa-brands fa-linkedin-in text-base"></i>
                                 </div>
                                 <div>
-                                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">LinkedIn Profile</span>
+                                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">LinkedIn</span>
                                     <a href="#" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-slate-800 dark:text-slate-200 hover:text-mapua-red transition-colors">
                                         linkedin.com/in/juan-dela-cruz-cpe
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- Detail Item 3 -->
                             <div class="flex items-start space-x-4">
-                                <div class="w-11 h-11 rounded-xl bg-mapua-red/10 dark:bg-mapua-red/20 flex items-center justify-center text-mapua-red dark:text-mapua-gold flex-shrink-0">
-                                    <i class="fa-solid fa-location-dot text-lg"></i>
+                                <div class="w-10 h-10 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-mapua-red dark:text-mapua-gold flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot text-base"></i>
                                 </div>
                                 <div>
-                                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Campus Location</span>
+                                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Campus</span>
                                     <p class="text-sm font-bold text-slate-800 dark:text-slate-200">
-                                        Mapúa University, Intramuros, Manila, Philippines
+                                        Mapúa University, Intramuros, Manila
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card Callout -->
-                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
-                            <span class="text-xs font-bold text-mapua-red dark:text-mapua-gold block">Availability Note:</span>
-                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                                Currently seeking undergraduate internship opportunities for upcoming terms.
+                        <div class="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs">
+                            <span class="font-bold text-mapua-red dark:text-mapua-gold block">Availability Note:</span>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">
+                                Open to undergraduate engineering internship placements.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Right Interactive Contact Form -->
+                    <!-- Right Form -->
                     <div class="lg:col-span-7">
-                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="bg-slate-50 dark:bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-6">
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 space-y-6">
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
                                     <label for="senderName" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Your Name *</label>
-                                    <input type="text" id="senderName" required placeholder="Juan Dela Cruz" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-mapua-red">
+                                    <input type="text" id="senderName" required placeholder="Juan Dela Cruz" class="w-full px-4 py-2.5 rounded-lg bg-mapua-bgLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-mapua-red">
                                 </div>
 
                                 <div>
                                     <label for="senderEmail" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Email Address *</label>
-                                    <input type="email" id="senderEmail" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-mapua-red">
+                                    <input type="email" id="senderEmail" required placeholder="name@example.com" class="w-full px-4 py-2.5 rounded-lg bg-mapua-bgLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-mapua-red">
                                 </div>
                             </div>
 
                             <div>
                                 <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Subject *</label>
-                                <input type="text" id="subject" required placeholder="Project Inquiry / Collaboration" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-mapua-red">
+                                <input type="text" id="subject" required placeholder="Academic Inquiry / Project Discussion" class="w-full px-4 py-2.5 rounded-lg bg-mapua-bgLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-mapua-red">
                             </div>
 
                             <div>
                                 <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Message *</label>
-                                <textarea id="message" rows="5" required placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-mapua-red resize-none"></textarea>
+                                <textarea id="message" rows="5" required placeholder="Write your message here..." class="w-full px-4 py-2.5 rounded-lg bg-mapua-bgLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-mapua-red resize-none"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-3.5 bg-mapua-red hover:bg-mapua-redDark text-white font-semibold text-sm rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                            <button type="submit" class="w-full py-3 bg-mapua-red hover:bg-mapua-redDark text-white font-semibold text-sm rounded-lg transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>Send Message</span>
                             </button>
 
-                            <!-- Alert Box for Form Status -->
-                            <div id="formStatus" class="hidden p-4 rounded-xl text-xs font-medium"></div>
+                            <div id="formStatus" class="hidden p-4 rounded-lg text-xs font-medium"></div>
 
                         </form>
                     </div>
@@ -855,18 +817,18 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <div class="flex justify-center items-center space-x-2 text-white font-heading font-bold text-xl">
-                <span class="w-8 h-8 rounded-lg bg-mapua-red flex items-center justify-center text-sm">M</span>
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex justify-center items-center space-x-2 text-white font-heading font-bold text-lg">
+                <span class="w-7 h-7 rounded bg-mapua-red flex items-center justify-center text-xs">M</span>
                 <span>Mapúa University CpE Student Portfolio</span>
             </div>
 
             <p class="text-xs max-w-md mx-auto text-slate-400">
-                Designed and developed as an academic portfolio showcasing engineering coursework, project papers, Coursera certificates, and personal growth.
+                Created as a student portfolio displaying coursework, research papers, Coursera certificates, and academic projects.
             </p>
 
-            <div class="flex justify-center space-x-6 text-sm text-slate-400">
+            <div class="flex justify-center space-x-6 text-xs text-slate-400 pt-2">
                 <a href="#home" class="hover:text-mapua-gold transition-colors">Home</a>
                 <a href="#about" class="hover:text-mapua-gold transition-colors">About</a>
                 <a href="#coursework" class="hover:text-mapua-gold transition-colors">Coursework</a>
@@ -874,95 +836,91 @@
                 <a href="#certificates" class="hover:text-mapua-gold transition-colors">Certificates</a>
             </div>
 
-            <div class="pt-6 border-t border-slate-800 text-xs text-slate-500">
-                &copy; 2026 Mapúa University Student Portfolio. All rights reserved. Viva Mapúa!
+            <div class="pt-4 border-t border-slate-800 text-xs text-slate-500">
+                &copy; 2026 Mapúa University Student Portfolio. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- MODAL OVERLAYS FOR PLACEHOLDERS -->
-
-    <!-- Modal Template Backdrop -->
-    <div id="modalBackdrop" class="fixed inset-0 bg-black/70 z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 overflow-y-auto">
+    <!-- MODALS OVERLAYS -->
+    <div id="modalBackdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 overflow-y-auto">
         
         <!-- Coursework 1 Modal -->
-        <div id="coursework1Modal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="coursework1Modal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="space-y-2">
-                <span class="px-2.5 py-1 bg-red-100 dark:bg-red-950 text-mapua-red text-xs font-bold rounded">MATH101 Placeholder</span>
+            <div class="space-y-1">
+                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-mapua-red text-xs font-bold rounded">MATH101 Placeholder</span>
                 <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Trigonometry & Geometric Analysis</h3>
             </div>
-            <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <p><strong>Course Description:</strong> Detailed mathematical foundation in trigonometric identities, vector decomposition, and spatial analysis used in engineering applications.</p>
-                <p><strong>Assignment Preview:</strong> "Analytical Solution of Vector Components in Structural Statics"</p>
-                <div class="p-3 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 text-slate-500 text-xs font-mono">
-                    // Placeholder for assignment code/notes<br>
+            <div class="p-4 bg-mapua-bgLight dark:bg-slate-800 rounded-lg space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <p><strong>Course Description:</strong> Mathematical principles of vector decomposition, trigonometric identities, and spatial analysis used in structural engineering modeling.</p>
+                <div class="p-3 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 font-mono text-xs text-slate-500">
                     Vector A = (15.4 cos(30°), 15.4 sin(30°))<br>
                     Vector B = (-8.2, 12.1)<br>
                     Resultant Magnitude = 22.15 units
                 </div>
             </div>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close Preview</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close Preview</button>
             </div>
         </div>
 
         <!-- Coursework 2 Modal -->
-        <div id="coursework2Modal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="coursework2Modal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="space-y-2">
-                <span class="px-2.5 py-1 bg-amber-100 dark:bg-amber-950 text-amber-700 text-xs font-bold rounded">CHEM101 Placeholder</span>
-                <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">General Chemistry & Chemical Kinetics</h3>
+            <div class="space-y-1">
+                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-mapua-red text-xs font-bold rounded">CHEM101 Placeholder</span>
+                <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">General Chemistry & Kinetics</h3>
             </div>
-            <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <p><strong>Lab Report Abstract:</strong> Measuring reaction rate constants (k) at varying temperatures to verify activation energy values.</p>
-                <div class="p-3 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 text-slate-500 text-xs font-mono">
+            <div class="p-4 bg-mapua-bgLight dark:bg-slate-800 rounded-lg space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <p><strong>Lab Report Abstract:</strong> Measuring reaction rate constants (k) at varying temperatures to verify chemical kinetic activation energy values.</p>
+                <div class="p-3 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 font-mono text-xs text-slate-500">
                     ln(k2/k1) = (Ea / R) * (1/T1 - 1/T2)<br>
-                    Determined Activation Energy (Ea) = 52.4 kJ/mol
+                    Activation Energy (Ea) = 52.4 kJ/mol
                 </div>
             </div>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close Preview</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close Preview</button>
             </div>
         </div>
 
         <!-- Coursework 3 Modal -->
-        <div id="coursework3Modal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="coursework3Modal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="space-y-2">
-                <span class="px-2.5 py-1 bg-blue-100 dark:bg-blue-950 text-blue-700 text-xs font-bold rounded">CPE201 Placeholder</span>
+            <div class="space-y-1">
+                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-mapua-red text-xs font-bold rounded">CPE201 Placeholder</span>
                 <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Electrochemistry & Circuit Analysis</h3>
             </div>
-            <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                <p><strong>Topic Summary:</strong> Electrochemical cell potentials, Nernst equation calculations, and Kirchhoff's current/voltage law simulation in LTSpice.</p>
+            <div class="p-4 bg-mapua-bgLight dark:bg-slate-800 rounded-lg space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <p><strong>Module Details:</strong> Electrochemical cell potentials, galvanic reactions, Nernst equation calculations, and Kirchhoff's loop simulation in LTSpice.</p>
             </div>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close Preview</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close Preview</button>
             </div>
         </div>
 
         <!-- Project Detail Modal -->
-        <div id="projectDetailModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="projectDetailModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Smart Battery Monitoring System Details</h3>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                This project combines electrochemical sensors with an ESP32 microcontroller to monitor real-time battery degradation in autonomous micro-grids. Features MQTT cloud data publishing, automated threshold warnings, and high-frequency ADC sampling.
+                This project combines electrochemical sensors with an ESP32 microcontroller to monitor battery degradation in real time. Features MQTT telemetry publishing, ADC voltage sampling, and threshold alerts.
             </p>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-mapua-red text-white text-xs font-semibold rounded-lg">Close</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-mapua-red text-white text-xs font-semibold rounded">Close</button>
             </div>
         </div>
 
         <!-- PROJECT PAPER MODAL PLACEHOLDER -->
-        <div id="projectPaperModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-3xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="projectPaperModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-3xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -970,119 +928,115 @@
                 <i class="fa-solid fa-file-pdf text-3xl text-mapua-red"></i>
                 <div>
                     <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">Project Paper Preview Placeholder</h3>
-                    <p class="text-xs text-slate-500">Document Title: SDG Position Paper / Technical Systems Analysis</p>
+                    <p class="text-xs text-slate-500">Document Title: SDG Position Paper / Technical Analysis</p>
                 </div>
             </div>
 
-            <!-- PDF Viewer Mockup Placeholder -->
-            <div class="h-64 sm:h-80 bg-slate-100 dark:bg-slate-950 rounded-xl p-4 overflow-y-auto border border-slate-200 dark:border-slate-800 space-y-4 text-xs text-slate-600 dark:text-slate-300 font-sans leading-relaxed">
-                <div class="text-center font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wide">
-                    Sustainable Energy & Micro-Grid Optimization in Modern Computing
+            <div class="h-64 sm:h-80 bg-mapua-bgLight dark:bg-slate-950 rounded-lg p-4 overflow-y-auto border border-slate-200 dark:border-slate-800 space-y-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                <div class="text-center font-bold text-sm text-slate-900 dark:text-white uppercase">
+                    Sustainable Energy & Micro-Grid Optimization in Embedded Systems
                 </div>
                 <div class="text-center italic text-slate-400">
                     Author: [Your Name Here] • School of EECE, Mapúa University
                 </div>
                 <hr class="border-slate-200 dark:border-slate-800">
                 <p><strong>1. Introduction</strong><br>
-                    The rapid growth of IoT devices requires energy-efficient compute platforms. This paper evaluates how electro-chemical storage units interface with micro-controllers...
+                    The growth of IoT computing systems requires energy-efficient platforms. This research evaluates how electrochemical storage cells interface with microcontrollers...
                 </p>
                 <p><strong>2. Methodology</strong><br>
-                    Data was gathered across 50 discharge cycles using precise current shunts and thermistors...
+                    Data was logged across 50 discharge cycles using shunt resistors and thermistors...
                 </p>
                 <p><strong>3. Conclusion</strong><br>
-                    Implementing kinetic state-of-charge algorithms reduced prediction error by 14.2%...
+                    State-of-charge calculation algorithms improved battery lifespan prediction accuracy by 14.2%...
                 </p>
             </div>
 
             <div class="flex justify-between items-center pt-2">
-                <span class="text-xs text-slate-400">PDF Placeholder View</span>
-                <button onclick="closeModal()" class="px-4 py-2 bg-mapua-red text-white text-xs font-semibold rounded-lg">Close Reader</button>
+                <span class="text-xs text-slate-400">Document Reader Placeholder</span>
+                <button onclick="closeModal()" class="px-4 py-2 bg-mapua-red text-white text-xs font-semibold rounded">Close Reader</button>
             </div>
         </div>
 
         <!-- PROJECT VIDEO MODAL PLACEHOLDER -->
-        <div id="projectVideoModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-3xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="projectVideoModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-3xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white flex items-center space-x-2">
                 <i class="fa-solid fa-circle-play text-mapua-red"></i>
-                <span>Project Presentation Video & Vlog Demo</span>
+                <span>Project Video Presentation & Demo</span>
             </h3>
 
-            <!-- Responsive Video Player Placeholder Container -->
-            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden flex items-center justify-center">
-                <!-- Embedded Video Placeholder (Using HTML5 video poster fallback) -->
-                <div class="text-center space-y-3 p-4">
-                    <i class="fa-solid fa-film text-5xl text-mapua-gold opacity-80"></i>
+            <div class="relative w-full aspect-video bg-black rounded-lg overflow-hidden flex items-center justify-center">
+                <div class="text-center space-y-2 p-4">
+                    <i class="fa-solid fa-film text-4xl text-mapua-gold"></i>
                     <p class="text-white text-sm font-semibold">Embedded Video Player Slot</p>
                     <p class="text-slate-400 text-xs max-w-sm">
-                        [Insert YouTube / Vimeo / Drive Video Embed URL here in your code: &lt;iframe src="..."&gt;&lt;/iframe&gt;]
+                        [Insert YouTube / Drive Video Embed URL in code]
                     </p>
                 </div>
             </div>
 
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close Player</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close Player</button>
             </div>
         </div>
 
-        <!-- Coursera Certificate 1 Modal -->
-        <div id="courseraCertModal1" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <!-- Coursera Cert 1 Modal -->
+        <div id="courseraCertModal1" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Coursera Certificate Placeholder 1</h3>
-            <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl text-center space-y-3 border border-dashed border-slate-300 dark:border-slate-700">
-                <i class="fa-solid fa-certificate text-5xl text-mapua-gold"></i>
+            <div class="p-6 bg-mapua-bgLight dark:bg-slate-800 rounded-lg text-center space-y-2 border border-dashed border-slate-300 dark:border-slate-700">
+                <i class="fa-solid fa-certificate text-4xl text-mapua-gold"></i>
                 <h4 class="font-bold text-slate-900 dark:text-white">Embedded Hardware Specialist</h4>
-                <p class="text-xs text-slate-500">Verify ID: COURSERA-CPE-MAPUA-99812</p>
+                <p class="text-xs text-slate-500">Verification ID: COURSERA-CPE-MAPUA-99812</p>
             </div>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close</button>
             </div>
         </div>
 
-        <!-- Coursera Certificate 2 Modal -->
-        <div id="courseraCertModal2" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <!-- Coursera Cert 2 Modal -->
+        <div id="courseraCertModal2" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Coursera Certificate Placeholder 2</h3>
-            <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl text-center space-y-3 border border-dashed border-slate-300 dark:border-slate-700">
-                <i class="fa-solid fa-certificate text-5xl text-mapua-gold"></i>
+            <div class="p-6 bg-mapua-bgLight dark:bg-slate-800 rounded-lg text-center space-y-2 border border-dashed border-slate-300 dark:border-slate-700">
+                <i class="fa-solid fa-certificate text-4xl text-mapua-gold"></i>
                 <h4 class="font-bold text-slate-900 dark:text-white">Python Data Science & Microcontrollers</h4>
-                <p class="text-xs text-slate-500">Verify ID: COURSERA-CPE-MAPUA-33401</p>
+                <p class="text-xs text-slate-500">Verification ID: COURSERA-CPE-MAPUA-33401</p>
             </div>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close</button>
             </div>
         </div>
 
         <!-- Seminar Cert Modal -->
-        <div id="seminarCertModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+        <div id="seminarCertModal" class="modal-content hidden bg-white dark:bg-slate-900 rounded-xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-xl relative border border-slate-200 dark:border-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">ICpEP Seminar Certificate</h3>
-            <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl text-center space-y-3 border border-dashed border-slate-300 dark:border-slate-700">
-                <i class="fa-solid fa-award text-5xl text-mapua-red"></i>
+            <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">ICpEP Workshop Certificate</h3>
+            <div class="p-6 bg-mapua-bgLight dark:bg-slate-800 rounded-lg text-center space-y-2 border border-dashed border-slate-300 dark:border-slate-700">
+                <i class="fa-solid fa-award text-4xl text-mapua-red"></i>
                 <h4 class="font-bold text-slate-900 dark:text-white">Mapúa ICpEP Technical Workshop Certificate</h4>
-                <p class="text-xs text-slate-500">Issued by Institute of Computer Engineers of the Philippines - Student Chapter</p>
+                <p class="text-xs text-slate-500">Issued by Institute of Computer Engineers of the Philippines - Mapúa Student Chapter</p>
             </div>
             <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg">Close</button>
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded">Close</button>
             </div>
         </div>
 
     </div>
 
-    <!-- JAVASCRIPT FOR INTERACTIVITY & MODALS -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         // --- Theme Toggle Logic ---
         const themeToggleBtn = document.getElementById('themeToggleBtn');
         
-        // Initialize Theme from system preference or default
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
         }
@@ -1091,7 +1045,7 @@
             document.documentElement.classList.toggle('dark');
         });
 
-        // --- Mobile Drawer Menu Logic ---
+        // --- Mobile Navigation ---
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
@@ -1106,7 +1060,7 @@
             });
         });
 
-        // --- Modal System Logic ---
+        // --- Modal Backdrop Logic ---
         const modalBackdrop = document.getElementById('modalBackdrop');
         const modalContents = document.querySelectorAll('.modal-content');
 
@@ -1114,13 +1068,9 @@
             const targetModal = document.getElementById(modalId);
             if (!targetModal) return;
 
-            // Hide all active modal content boxes
             modalContents.forEach(modal => modal.classList.add('hidden'));
-
-            // Show selected modal content
             targetModal.classList.remove('hidden');
 
-            // Fade in backdrop
             modalBackdrop.classList.remove('hidden');
             setTimeout(() => {
                 modalBackdrop.classList.remove('opacity-0');
@@ -1137,31 +1087,27 @@
             }, 300);
         }
 
-        // Close modal on clicking backdrop background
         modalBackdrop.addEventListener('click', (e) => {
             if (e.target === modalBackdrop) {
                 closeModal();
             }
         });
 
-        // Escape key listener for modal closing
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modalBackdrop.classList.contains('hidden')) {
                 closeModal();
             }
         });
 
-        // --- Interactive Contact Form Handling ---
+        // --- Form Handling ---
         function handleFormSubmit(event) {
             event.preventDefault();
             const formStatus = document.getElementById('formStatus');
             const name = document.getElementById('senderName').value;
 
-            // Feedback Message UI
-            formStatus.className = 'p-4 rounded-xl text-xs font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 block';
+            formStatus.className = 'p-4 rounded-lg text-xs font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 block';
             formStatus.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Thank you, <strong>${name}</strong>! Your message has been sent successfully. I will get back to you shortly.`;
 
-            // Reset Form Fields
             document.getElementById('contactForm').reset();
 
             setTimeout(() => {
@@ -1170,4 +1116,3 @@
         }
     </script>
 </body>
-</html>
